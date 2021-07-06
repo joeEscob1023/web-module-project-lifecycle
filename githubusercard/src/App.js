@@ -29,6 +29,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <User login={login} avatar_url={avatar_url} bio={bio} />
+        <h2>Followers</h2>
         <Followers />
       </div>
     );

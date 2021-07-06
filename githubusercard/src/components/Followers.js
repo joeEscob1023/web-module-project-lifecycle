@@ -24,12 +24,14 @@ class Followers extends React.Component {
         <h2>
           {this.state.followers.map((follower, index) => {
             return (
-              <ul key={index}>
+              <ul key={index} className="flexed">
                 {" "}
-                <li>{follower.login}</li>
-                <li>
-                  <img alt="follower images" src={follower.avatar_url} />
-                </li>
+                <div className="item">
+                  <li>{follower.login}</li>
+                  <li>
+                    <img alt="follower images" src={follower.avatar_url} />
+                  </li>
+                </div>
               </ul>
             );
           })}
