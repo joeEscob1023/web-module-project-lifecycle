@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import User from "./components/User";
 import "./App.css";
+import Followers from "./components/Followers";
 
 class App extends React.Component {
   state = {
@@ -24,10 +25,11 @@ class App extends React.Component {
   }
 
   render() {
-    const { login, avatar_url } = this.state.githubUsers;
+    const { login, avatar_url, bio } = this.state.githubUsers;
     return (
       <div className="App">
-        <User login={login} avatar_url={avatar_url} />
+        <User login={login} avatar_url={avatar_url} bio={bio} />
+        <Followers />
       </div>
     );
   }
