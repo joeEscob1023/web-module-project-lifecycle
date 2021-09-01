@@ -15,7 +15,7 @@ class App extends React.Component {
       .then((res) => {
         console.log(res.data);
         this.setState({
-          //...this.state,
+          ...this.state,
           githubUsers: res.data,
         });
       })
@@ -29,8 +29,10 @@ class App extends React.Component {
     return (
       <div className="App">
         <User login={login} avatar_url={avatar_url} bio={bio} />
-        <h2>Followers</h2>
-        <Followers />
+        <h2 className="followers">Followers</h2>
+        <div className="flexed">
+          <Followers />
+        </div>
       </div>
     );
   }

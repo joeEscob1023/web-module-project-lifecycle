@@ -20,22 +20,22 @@ class Followers extends React.Component {
 
   render() {
     return (
-      <div>
-        <h2>
-          {this.state.followers.map((follower, index) => {
-            return (
-              <ul key={index} className="flexed">
-                {" "}
-                <div className="item">
-                  <li>{follower.login}</li>
-                  <li>
-                    <img alt="follower images" src={follower.avatar_url} />
-                  </li>
-                </div>
-              </ul>
-            );
-          })}
-        </h2>
+      <div className="flexed">
+        {this.state.followers.map((follower, index) => {
+          return (
+            <ul key={index}>
+              {" "}
+              <div className="item">
+                <li>
+                  <h2>{follower.login}</h2>
+                </li>
+                <li>
+                  <img alt="follower images" src={follower.avatar_url} />
+                </li>
+              </div>
+            </ul>
+          );
+        })}
       </div>
     );
   }

@@ -7,6 +7,10 @@
   pointer-events: none;
 }
 
+.App .followers {
+  font-size: 50px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -49,7 +53,7 @@ li {
 
 .flexed {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
